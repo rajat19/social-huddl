@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "cd653aa0-3c81-486b-a065-ff0bc9edd842",
+		"name": "social-huddl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"rajatsriv2\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/signup",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhamF0c3JpdjIiLCJpYXQiOjE2MDg0NTk2ODQsImV4cCI6MTYwODQ2MzI4NH0.Nek08wzIjn4LimuAISV1EPW2kFuTeW1I3lAMoRpUELs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/5fdf25a4881854309c81585f",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"5fdf25a4881854309c81585f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhamF0c3JpdjIiLCJpYXQiOjE2MDg0NTk2ODQsImV4cCI6MTYwODQ2MzI4NH0.Nek08wzIjn4LimuAISV1EPW2kFuTeW1I3lAMoRpUELs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"commentText\": \"first ka second ka first\",\n    \"wallId\": \"5fdf24ddf6ae7a3062825a8c\",\n    \"authorId\": \"5fdf24ddf6ae7a3062825a8c\",\n    \"parentId\": \"5fdf29267e2d28316aa19dd6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/comment/",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"comment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhamF0c3JpdjIiLCJpYXQiOjE2MDg0NTk2ODQsImV4cCI6MTYwODQ2MzI4NH0.Nek08wzIjn4LimuAISV1EPW2kFuTeW1I3lAMoRpUELs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/comment/5fdf24ddf6ae7a3062825a8c",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"comment",
+						"5fdf24ddf6ae7a3062825a8c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Reaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhamF0c3JpdjIiLCJpYXQiOjE2MDg0NTk2ODQsImV4cCI6MTYwODQ2MzI4NH0.Nek08wzIjn4LimuAISV1EPW2kFuTeW1I3lAMoRpUELs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"commentId\": \"5fdf295b7e2d28316aa19dd7\",\n    \"authorId\": \"5fdf24ddf6ae7a3062825a8c\",\n    \"reaction\": \"like\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reaction/",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reaction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"rajatsriv2\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/login",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhamF0c3JpdjIiLCJ1c2VySWQiOiI1ZmRmMjVhNDg4MTg1NDMwOWM4MTU4NWYiLCJpYXQiOjE2MDg0NjMzOTQsImV4cCI6MTYwODQ2Njk5NH0.7ZnJhBL4695KPjgCshrYmZ415Ss4jlC29Lga9EIyC50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/comment/5fdf29267e2d28316aa19dd6",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"api",
+						"v1",
+						"comment",
+						"5fdf29267e2d28316aa19dd6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,35 @@
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+*.heapsnapshot
+*.diff
+pids
+logs
+results
+
+package-lock.json
+yarn.lock
+npm-debug.log
+node_modules
+public/images/
+.project
+.settings
+*.DS_Store
+.idea
+site/
+.nyc_output/
+coverage/
+
+# vs_code
+.vscode
+jsconfig.json
+typings/
+
+# other files
+garbage/
+
+.env
